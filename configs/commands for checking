@@ -1,0 +1,13 @@
+! On Router:
+ping 192.168.1.10 
+ping 192.168.2.x   
+show ip dhcp binding  
+
+! On Switch:
+show vlan brief    
+show interfaces status 
+
+! Testing isolation:
+! From cashier PC: ping 192.168.2.x -> should FAIL
+! From guest laptop: ping 192.168.1.10 -> should FAIL
+! Both should be able to ping their gateway (192.168.1.1 and 192.168.2.1)
